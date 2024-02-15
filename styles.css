@@ -1,18 +1,22 @@
 /* Add a class for the typing animation */
 .typing-animation {
     overflow: hidden;
-    border-right: .15em solid purple; /* Purple color */
     white-space: nowrap;
     margin: 0 auto; /* Center the typing animation */
     padding: 0; /* Reset padding */
     display: inline-block; /* Ensure inline-block for centering */
-    animation: typing 3.5s steps(40, end);
+    font-family: monospace; /* Use a code font */
 }
 
-/* Define keyframes for the typing animation */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.typing-animation::after {
+    content: '|'; /* Cursor at the end */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Define keyframes for the blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #c9d1d9; } /* Cursor color */
 }
 
 /* Reset default margin and padding */
@@ -25,8 +29,8 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Light background color */
-    color: #333; /* Text color */
+    background-color: #0d1117; /* Dark background color */
+    color: #c9d1d9; /* Text color */
 }
 
 /* Container styles */
@@ -38,8 +42,8 @@ body {
 
 /* Header styles */
 header {
-    background-color: #6A0DAD; /* Purple background color */
-    color: #fff; /* Header text color */
+    background-color: #0d1117; /* Dark background color */
+    color: #c9d1d9; /* Header text color */
     padding: 20px 0;
     text-align: center; /* Center the text in the header */
 }
@@ -58,14 +62,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #c9d1d9;
     text-decoration: none;
 }
 
 /* Hero section styles */
 .hero {
-    background-color: #A77BFF; /* Lighter purple background color */
-    color: #fff; /* Hero text color */
+    background-color: #0d1117; /* Dark background color */
+    color: #c9d1d9; /* Hero text color */
     padding: 100px 0;
     text-align: center;
 }
@@ -83,7 +87,7 @@ nav ul li a {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FFD700; /* Gold button color */
+    background-color: #2ea44f; /* Neon green button color */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -91,13 +95,13 @@ nav ul li a {
 }
 
 .btn:hover {
-    background-color: #DAA520; /* Darker gold on hover */
+    background-color: #4fd661; /* Darker green on hover */
 }
 
 /* Footer styles */
 footer {
-    background-color: #333; /* Dark background color for footer */
-    color: #fff;
+    background-color: #0d1117; /* Dark background color for footer */
+    color: #c9d1d9;
     padding: 20px 0;
     text-align: center;
 }
