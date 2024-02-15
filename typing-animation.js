@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const text = elements[i].textContent.trim();
         elements[i].textContent = ''; // Clear the original text
         let index = 0;
-        let typedText = '';
+        let typedText = 'Welcome to puplePixel Webworks';
 
         function type() {
             if (index < text.length) {
