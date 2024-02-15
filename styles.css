@@ -4,21 +4,13 @@
     border-right: .15em solid purple; /* Purple color */
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end),
-            blink-caret .75s step-end infinite;
+    animation: typing 3.5s steps(40, end);
 }
 
 /* Define keyframes for the typing animation */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-}
-
-/* Define keyframes for the blinking caret */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: purple; } /* Purple color */
 }
 
 /* Reset default margin and padding */
