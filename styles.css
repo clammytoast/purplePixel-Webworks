@@ -19,6 +19,32 @@
     50% { border-color: #c9d1d9; } /* Cursor color */
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Apply typing animation to the text */
+.typing-animation::before {
+    content: attr(data-text); /* Display the original text */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3.5s steps(40, end) 1 forwards; /* Run animation only once */
+}
+
+/* Add blinking cursor animation */
+.blinking-cursor {
+    animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 /* Reset default margin and padding */
 * {
     margin: 0;
