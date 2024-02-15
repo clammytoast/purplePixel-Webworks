@@ -1,6 +1,10 @@
-// Initialize Typed.js for typing animation
-var typed = new Typed('#typing-element', {
-    strings: ['Welcome to PurplePixel Webworks'],
-    typeSpeed: 50,
-    loop: false // optional: whether the typing should loop
+document.addEventListener('DOMContentLoaded', function() {
+    var typed = new Typed('#typed', {
+        strings: ['Welcome to PurplePixel Webworks'],
+        typeSpeed: 50, // Speed of typing in milliseconds
+        showCursor: false, // Hide cursor after typing
+        onComplete: function() {
+            // Do something when typing animation completes, if needed
+        }
+    });
 });
