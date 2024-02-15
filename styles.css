@@ -1,4 +1,54 @@
-/* Your CSS styles here */
+/* Add a class for the typing animation */
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto; /* Center the typing animation */
+    padding: 0; /* Reset padding */
+    display: inline-block; /* Ensure inline-block for centering */
+    font-family: monospace; /* Use a code font */
+    color: #d4af37; /* Gold color for the text */
+}
+
+.typing-animation::after {
+    content: '|'; /* Cursor at the end */
+    animation: blink-caret 0.75s step-end infinite;
+    color: #d4af37; /* Gold color for the cursor */
+}
+
+/* Define keyframes for the blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #d4af37; } /* Gold color for the cursor */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Apply typing animation to the text */
+.typing-animation::before {
+    content: attr(data-text); /* Display the original text */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3.5s steps(40, end) 1 forwards; /* Run animation only once */
+    color: #d4af37; /* Gold color for the text */
+}
+
+/* Add blinking cursor animation */
+.blinking-cursor {
+    animation: blink 0.75s infinite;
+    color: #d4af37; /* Gold color for the cursor */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 /* Reset default margin and padding */
 * {
     margin: 0;
@@ -9,8 +59,8 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d1117; /* Dark background color */
-    color: #c9d1d9; /* Text color */
+    background-color: #1f1f23; /* Dark background color */
+    color: #d4af37; /* Text color */
 }
 
 /* Container styles */
@@ -22,8 +72,8 @@ body {
 
 /* Header styles */
 header {
-    background-color: #0d1117; /* Dark background color */
-    color: #c9d1d9; /* Header text color */
+    background-color: #1f1f23; /* Dark background color */
+    color: #d4af37; /* Header text color */
     padding: 20px 0;
     text-align: center; /* Center the text in the header */
 }
@@ -42,14 +92,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #c9d1d9;
+    color: #d4af37;
     text-decoration: none;
 }
 
 /* Hero section styles */
 .hero {
-    background-color: #0d1117; /* Dark background color */
-    color: #c9d1d9; /* Hero text color */
+    background-color: #1f1f23; /* Dark background color */
+    color: #d4af37; /* Hero text color */
     padding: 100px 0;
     text-align: center;
 }
@@ -67,7 +117,7 @@ nav ul li a {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2ea44f; /* Neon green button color */
+    background-color: #662d91; /* Purple button color */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -75,41 +125,13 @@ nav ul li a {
 }
 
 .btn:hover {
-    background-color: #4fd661; /* Darker green on hover */
+    background-color: #9255b7; /* Darker purple on hover */
 }
 
 /* Footer styles */
 footer {
-    background-color: #0d1117; /* Dark background color for footer */
-    color: #c9d1d9;
+    background-color: #1f1f23; /* Dark background color for footer */
+    color: #d4af37;
     padding: 20px 0;
     text-align: center;
-}
-
-/* Typing animation */
-#typing-element {
-    font-family: monospace; /* Use a code font */
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto; /* Center the typing animation */
-    padding: 0; /* Reset padding */
-    display: inline-block; /* Ensure inline-block for centering */
-}
-
-/* Cursor animation */
-.typed-cursor {
-    opacity: 1;
-    animation: blink 0.75s infinite;
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
