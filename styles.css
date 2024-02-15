@@ -3,7 +3,9 @@
     overflow: hidden;
     border-right: .15em solid purple; /* Purple color */
     white-space: nowrap;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the typing animation */
+    padding: 0; /* Reset padding */
+    display: inline-block; /* Ensure inline-block for centering */
     animation: typing 3.5s steps(40, end);
 }
 
@@ -39,6 +41,7 @@ header {
     background-color: #6A0DAD; /* Purple background color */
     color: #fff; /* Header text color */
     padding: 20px 0;
+    text-align: center; /* Center the text in the header */
 }
 
 header h1 {
