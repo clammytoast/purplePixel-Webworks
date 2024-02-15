@@ -2,13 +2,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.getElementsByClassName("typing-animation");
     for (let i = 0; i < elements.length; i++) {
-        const text = elements[i].textContent;
-        elements[i].innerHTML = "";
-        for (let j = 0; j < text.length; j++) {
-            const letterSpan = document.createElement("span");
-            letterSpan.textContent = text[j];
-            letterSpan.style.animationDelay = `${0.1 * j}s`;
-            elements[i].appendChild(letterSpan);
+        const text = elements[i].textContent.trim();
+        elements[i].textContent = ''; // Clear the original text
+        let index = 0;
+        let typedText = '';
+
+        function type() {
+            if (index < text.length) {
+                typedText += text.charAt(index);
+                elements[i].textContent = typedText;
+                index++;
+                setTimeout(type, Math.floor(Math.random() * 150) + 50); // Random delay between 50ms to 200ms
+            }
         }
+
+        type();
     }
 });
