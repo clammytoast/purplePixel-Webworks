@@ -1,19 +1,17 @@
 const textEl = document.getElementById('text');
 
 const text = 'Welcome to PurplePixel Webworks!';
-let idx = 1;
-let speed = 300;
+let idx = 0;
+let speed = 100; // Faster speed
 
 writeText();
 
 function writeText() {
-    textEl.innerText = text.slice(0, idx);
-
-    idx++;
-
-    if (idx > text.length) {
-        idx = 1;
+    if (idx < text.length) {
+        textEl.innerText += text.charAt(idx);
+        idx++;
+        setTimeout(writeText, speed);
+    } else {
+        textEl.innerHTML += '<span class="blinking-cursor">|</span>'; // Add blinking cursor after typing
     }
-
-    setTimeout(writeText, speed);
 }
