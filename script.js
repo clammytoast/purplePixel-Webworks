@@ -1,6 +1,6 @@
 // Initialize Typed.js for typing animation
 var typed = new Typed('#typing-element', {
-    strings: ['Welcome to PurplePixel Webworks!', 'where creativity meets innovation.'],
+    strings: ['Welcome to PurplePixel Webworks!'],
     typeSpeed: 50,
-    loop: true // optional: whether the typing should loop
+    loop: false // optional: whether the typing should loop
 });
