@@ -1,50 +1,4 @@
-/* Add a class for the typing animation */
-.typing-animation {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto; /* Center the typing animation */
-    padding: 0; /* Reset padding */
-    display: inline-block; /* Ensure inline-block for centering */
-    font-family: monospace; /* Use a code font */
-}
-
-.typing-animation::after {
-    content: '|'; /* Cursor at the end */
-    animation: blink-caret 0.75s step-end infinite;
-}
-
-/* Define keyframes for the blinking cursor */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #c9d1d9; } /* Cursor color */
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* Apply typing animation to the text */
-.typing-animation::before {
-    content: attr(data-text); /* Display the original text */
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 3.5s steps(40, end) 1 forwards; /* Run animation only once */
-}
-
-/* Add blinking cursor animation */
-.blinking-cursor {
-    animation: blink 0.75s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
+/* Your CSS styles here */
 /* Reset default margin and padding */
 * {
     margin: 0;
@@ -130,4 +84,32 @@ footer {
     color: #c9d1d9;
     padding: 20px 0;
     text-align: center;
+}
+
+/* Typing animation */
+#typing-element {
+    font-family: monospace; /* Use a code font */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto; /* Center the typing animation */
+    padding: 0; /* Reset padding */
+    display: inline-block; /* Ensure inline-block for centering */
+}
+
+/* Cursor animation */
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
