@@ -6,19 +6,19 @@
     padding: 0; /* Reset padding */
     display: inline-block; /* Ensure inline-block for centering */
     font-family: monospace; /* Use a code font */
-    color: #650675; /* Gold color for the text */
+    color: #800080; /* Purple color for the text */
 }
 
 .typing-animation::after {
     content: '|'; /* Cursor at the end */
     animation: blink-caret 0.75s step-end infinite;
-    color: #650675; /* Gold color for the cursor */
+    color: #d4af37; /* Gold color for the cursor */
 }
 
 /* Define keyframes for the blinking cursor */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #650675; } /* Gold color for the cursor */
+    50% { border-color: #d4af37; } /* Gold color for the cursor */
 }
 
 @keyframes typing {
@@ -34,13 +34,13 @@
     white-space: nowrap;
     width: 0;
     animation: typing 3.5s steps(40, end) 1 forwards; /* Run animation only once */
-    color: #650675; /* Gold color for the text */
+    color: #800080; /* Purple color for the text */
 }
 
 /* Add blinking cursor animation */
 .blinking-cursor {
     animation: blink 0.75s infinite;
-    color: #650675; /* Gold color for the cursor */
+    color: #d4af37; /* Gold color for the cursor */
 }
 
 @keyframes blink {
@@ -59,8 +59,8 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d0d0d; /* Dark background color */
-    color: #650675; /* Text color */
+    background-color: #000; /* Black background color */
+    color: #800080; /* Purple text color */
 }
 
 /* Container styles */
@@ -72,8 +72,8 @@ body {
 
 /* Header styles */
 header {
-    background-color: #0d0d0d; /* Dark background color */
-    color: #650675; /* Header text color */
+    background-color: #000; /* Black background color */
+    color: #d4af37; /* Gold header text color */
     padding: 20px 0;
     text-align: center; /* Center the text in the header */
 }
@@ -92,14 +92,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #d4af37;
+    color: #d4af37; /* Gold color for navigation links */
     text-decoration: none;
 }
 
 /* Hero section styles */
 .hero {
-    background-color: #0d0d0d; /* Dark background color */
-    color: #650675; /* Hero text color */
+    background-color: #000; /* Black background color */
+    color: #800080; /* Purple hero text color */
     padding: 100px 0;
     text-align: center;
 }
@@ -117,8 +117,8 @@ nav ul li a {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #d4af37; /* Gold button color */
-    color: #650675; /* Purple color for button text */
+    background-color: #800080; /* Purple button color */
+    color: #d4af37; /* Gold button text color */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -130,8 +130,8 @@ nav ul li a {
 
 /* Footer styles */
 footer {
-    background-color: #0d0d0d; /* Dark background color for footer */
-    color: #650675;
+    background-color: #000; /* Black background color for footer */
+    color: #d4af37; /* Gold footer text color */
     padding: 20px 0;
     text-align: center;
 }
