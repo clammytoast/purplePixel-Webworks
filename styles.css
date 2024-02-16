@@ -99,7 +99,7 @@ nav ul li a {
 /* Hero section styles */
 .hero {
     background-color: #0d0d0d; /* Dark background color */
-    color: #d4af37; /* Hero text color */
+    color: #650675; /* Hero text color */
     padding: 100px 0;
     text-align: center;
 }
@@ -131,7 +131,7 @@ nav ul li a {
 /* Footer styles */
 footer {
     background-color: #0d0d0d; /* Dark background color for footer */
-    color: #d4af37;
+    color: #650675;
     padding: 20px 0;
     text-align: center;
 }
